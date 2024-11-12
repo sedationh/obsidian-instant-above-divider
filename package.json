@@ -1,7 +1,7 @@
 {
 	"name": "obsidian-instant-above-divider",
 	"version": "1.0.0",
-	"description": "This is a sample plugin for Obsidian (https://obsidian.md)",
+	"description": "Quickly insert a divider line at the beginning of your note.",
 	"main": "main.js",
 	"scripts": {
 		"dev": "node esbuild.config.mjs",
