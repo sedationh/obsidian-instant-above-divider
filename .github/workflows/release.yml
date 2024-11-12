@@ -27,8 +27,18 @@ jobs:
                   GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
               run: |
                   tag="${GITHUB_REF#refs/tags/}"
+                  
+                  # Create a directory with plugin name and version
+                  mkdir obsidian-instant-above-divider-${tag}
+                  
+                  # Copy files to the directory
+                  cp main.js manifest.json styles.css obsidian-instant-above-divider-${tag}/
+                  
+                  # Create zip archive
+                  zip -r obsidian-instant-above-divider-${tag}.zip obsidian-instant-above-divider-${tag}
 
+                  # Create release
                   gh release create "$tag" \
                     --title="$tag" \
                     --draft \
-                    main.js manifest.json styles.css
+                    obsidian-instant-above-divider-${tag}.zip
