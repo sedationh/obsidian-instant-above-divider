@@ -6,7 +6,10 @@
 	"scripts": {
 		"dev": "node esbuild.config.mjs",
 		"build": "tsc -noEmit -skipLibCheck && node esbuild.config.mjs production",
-		"version": "node version-bump.mjs && git add manifest.json versions.json"
+		"version": "node version-bump.mjs && git add manifest.json versions.json",
+		"publish:patch": "node scripts/publish.mjs patch",
+		"publish:minor": "node scripts/publish.mjs minor",
+		"publish:major": "node scripts/publish.mjs major"
 	},
 	"keywords": [],
 	"author": "",
@@ -23,5 +26,6 @@
 	},
 	"dependencies": {
 		"chokidar": "^4.0.1"
+		
 	}
 }
