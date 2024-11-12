@@ -40,4 +40,4 @@ jobs:
                   # Create release
                   gh release create "$tag" \
                     --title="$tag" \
-                    obsidian-instant-above-divider-${tag}.zip
+                    obsidian-instant-above-divider-${tag}.zip main.js manifest.json styles.css
