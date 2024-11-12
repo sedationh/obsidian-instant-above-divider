@@ -1,5 +1,5 @@
 {
-	"name": "obsidian-instant-above-divider",
+	"name": "instant-above-divider",
 	"version": "1.0.2",
 	"description": "Quickly insert a divider line at the beginning of your note.",
 	"main": "main.js",
