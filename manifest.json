@@ -1,7 +1,7 @@
 {
 	"id": "obsidian-instant-above-divider",
 	"name": "InstantAboveDivider",
-	"version": "1.0.0",
+	"version": "1.0.1",
 	"minAppVersion": "0.15.0",
 	"description": "Quickly insert a divider line at the beginning of your note.",
 	"author": "SedationH",
