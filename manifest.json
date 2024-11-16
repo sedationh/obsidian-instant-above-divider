@@ -1,7 +1,7 @@
 {
 	"id": "instant-above-divider",
 	"name": "Instant Above Divider",
-	"version": "1.0.6",
+	"version": "1.0.7",
 	"minAppVersion": "0.15.0",
 	"description": "Quickly insert a divider line at the beginning of your note.",
 	"author": "SedationH",
