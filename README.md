@@ -1,4 +1,4 @@
-# Obsidian Instant Above Divider
+# Instant Above Divider
 
 A simple Obsidian plugin that adds a command to instantly insert a divider line (---) at the beginning of the current note.
 
