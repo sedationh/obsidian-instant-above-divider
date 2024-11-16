@@ -22,7 +22,7 @@ const VAULT_PATH = path.join(
 
 const ROOT_DIR = __dirname;
 
-const FILES_TO_COPY = ["main.js", "manifest.json", "styles.css"];
+const FILES_TO_COPY = ["main.js", "manifest.json"];
 
 function copyToVault(file) {
 	const sourcePath = path.join(ROOT_DIR, file);
