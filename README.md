@@ -19,7 +19,7 @@ A simple Obsidian plugin that adds a command to instantly insert a divider line 
 
 1. Open Obsidian Settings > Hotkeys
 2. Search for "Instant Above Divider: Add Section"
-3. Set your preferred hotkey
+3. Set your preferred hotkey (recommended: `Option/Alt + Shift + N`)
 4. Use your configured hotkey to insert a divider at the beginning of the current note
 
 ### Settings
