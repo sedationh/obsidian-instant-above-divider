@@ -7,5 +7,14 @@
       ],
       "key": "N"
     }
+  ],
+  "instant-above-divider:add-section": [
+    {
+      "modifiers": [
+        "Alt",
+        "Shift"
+      ],
+      "key": "N"
+    }
   ]
 }
