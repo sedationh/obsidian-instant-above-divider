@@ -18,18 +18,23 @@ export default class InstantAboveDividerPlugin extends Plugin {
 			id: "add-section",
 			name: "Add Section",
 			editorCallback: (editor: Editor) => {
+				if (!this.settings.respectHeadings) {
+					editor.setCursor(0, 0);
+					const newContent = "\n\n---\n\n";
+					editor.replaceRange(newContent, { line: 0, ch: 0 });
+					return;
+				}
+
 				const cursorPos = editor.getCursor();
 				const content = editor.getValue();
 				const lines = content.split("\n");
 				let insertLine = cursorPos.line;
 
-				if (this.settings.respectHeadings) {
-					// 查找光标之前的最近标题
-					for (let i = cursorPos.line - 1; i >= 0; i--) {
-						if (lines[i].match(/^#{1,6}\s/)) {
-							insertLine = i + 1;
-							break;
-						}
+				// 查找光标之前的最近标题
+				for (let i = cursorPos.line - 1; i >= 0; i--) {
+					if (lines[i].match(/^#{1,6}\s/)) {
+						insertLine = i + 1;
+						break;
 					}
 				}
 
