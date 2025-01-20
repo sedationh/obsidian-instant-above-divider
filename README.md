@@ -2,6 +2,13 @@
 
 A simple Obsidian plugin that adds a command to instantly insert a divider line (---) at the beginning of the current note.
 
+
+
+
+https://github.com/user-attachments/assets/40e62de3-9893-4807-9f46-359726d2a319
+
+
+
 ## Features
 
 -   Adds a command to insert a divider at the beginning of the note
