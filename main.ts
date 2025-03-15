@@ -28,7 +28,7 @@ export default class InstantAboveDividerPlugin extends Plugin {
 				const cursorPos = editor.getCursor();
 				const content = editor.getValue();
 				const lines = content.split("\n");
-				let insertLine = cursorPos.line;
+				let insertLine = 0; // 默认在文件开头
 
 				// 查找光标之前的最近标题
 				for (let i = cursorPos.line - 1; i >= 0; i--) {
@@ -36,6 +36,13 @@ export default class InstantAboveDividerPlugin extends Plugin {
 						insertLine = i + 1;
 						break;
 					}
+				}
+
+				if (insertLine === 0) {
+					editor.setCursor(0, 0);
+					const newContent = "\n\n---\n\n";
+					editor.replaceRange(newContent, { line: 0, ch: 0 });
+					return;
 				}
 
 				const newContent = "\n\n\n---\n";
