@@ -14,6 +14,7 @@ https://github.com/user-attachments/assets/40e62de3-9893-4807-9f46-359726d2a319
 -   Adds a command to insert a divider at the beginning of the note
 -   Automatically moves cursor to the beginning after insertion
 -   Option to respect headings when inserting dividers
+-   Smart handling of frontmatter - dividers are inserted after frontmatter if present
 
 ## Installation
 
@@ -38,7 +39,9 @@ When enabled, the plugin will consider the location of headings when inserting d
 -   If the cursor is directly after a heading, the divider will be inserted after that heading
 -   Otherwise, the divider will be inserted at the current cursor position
 
-When disabled, dividers will always be inserted at the current cursor position.
+When disabled, dividers will always be inserted at the beginning of the note content (after frontmatter if present).
+
+Note: The plugin will always respect frontmatter (YAML metadata at the beginning of the note) regardless of this setting. If your note has frontmatter, the divider will be inserted after it rather than at the very beginning of the file.
 
 ## License
 
