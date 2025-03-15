@@ -19,9 +19,29 @@ export default class InstantAboveDividerPlugin extends Plugin {
 			name: "Add Section",
 			editorCallback: (editor: Editor) => {
 				if (!this.settings.respectHeadings) {
-					editor.setCursor(0, 0);
-					const newContent = "\n\n---\n\n";
-					editor.replaceRange(newContent, { line: 0, ch: 0 });
+					const content = editor.getValue();
+					const lines = content.split("\n");
+					
+					// Check if there's frontmatter
+					if (lines[0]?.trim() === "---") {
+						// Find the end of frontmatter
+						let endOfFrontmatter = 1;
+						for (let i = 1; i < lines.length; i++) {
+							if (lines[i].trim() === "---") {
+								endOfFrontmatter = i + 1;
+								break;
+							}
+						}
+						
+						const newContent = "\n\n---\n\n";
+						editor.replaceRange(newContent, { line: endOfFrontmatter, ch: 0 });
+						editor.setCursor(endOfFrontmatter + 1, 0);
+					} else {
+						// If no frontmatter, add at the beginning
+						editor.setCursor(0, 0);
+						const newContent = "\n\n---\n\n";
+						editor.replaceRange(newContent, { line: 0, ch: 0 });
+					}
 					return;
 				}
 
