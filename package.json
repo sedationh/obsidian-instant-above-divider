@@ -1,6 +1,6 @@
 {
 	"name": "instant-above-divider",
-	"version": "1.2.0",
+	"version": "1.2.1",
 	"description": "Quickly insert a divider line at the beginning of your note.",
 	"main": "main.js",
 	"scripts": {
