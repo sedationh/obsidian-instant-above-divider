@@ -1,0 +1,113 @@
+/* Outline View Styles */
+.outline-content {
+  padding: 10px;
+}
+
+.outline-empty {
+  color: var(--text-muted);
+  font-style: italic;
+  text-align: center;
+  margin: 20px 0;
+}
+
+.outline-item {
+  display: flex;
+  align-items: center;
+  padding: 4px 8px;
+  margin: 2px 0;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.outline-item:hover {
+  background-color: var(--background-modifier-hover);
+}
+
+.outline-item:hover .outline-item-icon {
+  opacity: 1;
+}
+
+.outline-item-icon {
+  margin-right: 8px;
+  font-weight: 600;
+  color: var(--text-muted);
+  min-width: 24px;
+  text-align: center;
+  font-size: 11px;
+  opacity: 0.8;
+  transition: opacity 0.2s ease;
+  background-color: var(--background-modifier-border);
+  border-radius: 3px;
+  padding: 2px 4px;
+  line-height: 1;
+}
+
+.outline-item-title {
+  flex: 1;
+  font-size: 14px;
+  color: var(--text-normal);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* Heading specific styles */
+.outline-item[data-type="heading"] .outline-item-icon {
+  color: var(--text-normal);
+}
+
+/* Different colors for different heading levels */
+.outline-item[data-level="1"] .outline-item-icon {
+  background-color: var(--text-accent);
+  color: var(--text-on-accent);
+}
+
+.outline-item[data-level="2"] .outline-item-icon {
+  background-color: var(--interactive-accent);
+  color: var(--text-on-accent);
+}
+
+.outline-item[data-level="3"] .outline-item-icon {
+  background-color: var(--background-modifier-border);
+  color: var(--text-normal);
+}
+
+.outline-item[data-level="4"] .outline-item-icon {
+  background-color: var(--background-modifier-border);
+  color: var(--text-muted);
+}
+
+.outline-item[data-level="5"] .outline-item-icon {
+  background-color: var(--background-modifier-border);
+  color: var(--text-faint);
+}
+
+.outline-item[data-level="6"] .outline-item-icon {
+  background-color: var(--background-modifier-border);
+  color: var(--text-faint);
+}
+
+/* Divider specific styles */
+.outline-item[data-type="divider"] .outline-item-icon {
+  color: var(--text-faint);
+}
+
+/* Level-based indentation */
+.outline-item[data-level="1"] { padding-left: 8px; }
+.outline-item[data-level="2"] { padding-left: 28px; }
+.outline-item[data-level="3"] { padding-left: 48px; }
+.outline-item[data-level="4"] { padding-left: 68px; }
+.outline-item[data-level="5"] { padding-left: 88px; }
+.outline-item[data-level="6"] { padding-left: 108px; }
+
+/* Active state */
+.outline-item.active {
+  background-color: var(--background-modifier-active);
+}
+
+/* Focus state */
+.outline-item:focus {
+  outline: 2px solid var(--text-accent);
+  outline-offset: 2px;
+} 

@@ -24,6 +24,14 @@ const ROOT_DIR = __dirname;
 
 const FILES_TO_COPY = ["main.js", "manifest.json"];
 
+// 判断是否存在样式文件
+const STYLES_PATH = path.join(ROOT_DIR, "styles.css");
+const STYLES_EXISTS = fs.existsSync(STYLES_PATH);
+
+if (STYLES_EXISTS) {
+	FILES_TO_COPY.push("styles.css");
+}
+
 function copyToVault(file) {
 	const sourcePath = path.join(ROOT_DIR, file);
 	const targetPath = path.join(VAULT_PATH, file);

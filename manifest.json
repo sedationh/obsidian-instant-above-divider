@@ -6,5 +6,7 @@
 	"description": "Quickly insert a divider line at the beginning of your note.",
 	"author": "SedationH",
 	"authorUrl": "https://github.com/sedationh",
-	"isDesktopOnly": false
+	"isDesktopOnly": false,
+	"js": "main.js",
+	"css": "styles.css"
 }

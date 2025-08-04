@@ -16,5 +16,14 @@
       ],
       "key": "N"
     }
+  ],
+  "instant-above-divider:show-outline": [
+    {
+      "modifiers": [
+        "Alt",
+        "Shift"
+      ],
+      "key": "M"
+    }
   ]
 }
