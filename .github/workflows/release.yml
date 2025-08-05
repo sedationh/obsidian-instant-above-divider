@@ -32,7 +32,7 @@ jobs:
                   mkdir obsidian-instant-above-divider-${tag}
                   
                   # Copy files to the directory
-                  cp main.js manifest.json  obsidian-instant-above-divider-${tag}/
+                  cp main.js manifest.json styles.css  obsidian-instant-above-divider-${tag}/
                   
                   # Create zip archive
                   zip -r obsidian-instant-above-divider-${tag}.zip obsidian-instant-above-divider-${tag}
@@ -40,4 +40,4 @@ jobs:
                   # Create release
                   gh release create "$tag" \
                     --title="$tag" \
-                    obsidian-instant-above-divider-${tag}.zip main.js manifest.json 
+                    obsidian-instant-above-divider-${tag}.zip main.js manifest.json styles.css
